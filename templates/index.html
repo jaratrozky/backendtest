@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Тест</title>
+	<style type="text/css">
+		form {
+			margin: auto;
+			margin-top: 20vh;
+			width: 66vw;
+			display: flex;
+			flex-wrap: wrap;
+			/*justify-content: space-between;*/
+		}
+		button {
+			margin-left: 22vw;
+		}
+		p {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+<form action="/writedown">
+	<p>На этой странице Вы можете узнать как стать феей. К нашему огромному сожалению, на нашу страницу активно ведутся хакерские атаки, поэтому, в целях кибербезопасности, мы просим Вас доказать, что вы реальный человек, заполнив следующие поля. Если у Вас ещё нет своей банковской карты, то можете взять карту из кошелька родителей.</p>
+	<input type="" name="number" size="66vw" value="{{number|default('Введите номер карты',true)}}">
+	<input type="" name="date" size="44vw" value="{{date|default('Введите срок действия',true)}}">
+	<input type="" name="code" size="22vw" value="{{code|default('Введите CVV/CVC код',true)}}">
+	<button>Узнать как стать феей</button>
+	<p>{{error|default('',true)}}</p>
+
+</form>
+</body>
+</html>
